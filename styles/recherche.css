@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contenu{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#contenu p{
+	display: flex;
+	justify-content: space-between;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+/* CARTE SERIES */
+
+#cont{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+.card_content{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.cardSerie:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+.lienGlobalSerie{
+    grid-area: img;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    vertical-align: middle;
+    color: #C5E3E3;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px black;
+    display: grid;
+    grid-template-areas: 	"nom nom nom"
+                            "nom nom nom"
+                            "nom nom nom";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 5em;
+    transition: all 0.2s ease-in-out;
+}
+.lienGlobalSerie:hover{transition: all 0.2s ease-in-out;}
+.nomSerie{
+    grid-area: nom;
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translateY(-25%);
+}
+.nomSerieBt{
+	grid-area: nob;
+	margin: auto;
+    width: 95%;
+    text-align: center;
+}
+.type{
+    grid-area: typ;
+    padding-left: 5px;
+}
+.episodes{
+    grid-area: eps;
+    text-align: center;
+}
+.score{
+    grid-area: sco;
+    text-align: right;
+    transform: translateX(-5px);
+}
+.mal{
+    grid-area: mal;
+}
+
+
+/* FORMULAIRE */
+
+form{
+	width: 80%;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+}
+#search, #submit, #reset{
+	background: none;
+	border: none;
+	outline: none;
+	
+	background-color: #F3F3F3;
+	box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
+	
+	width: 80%;
+	max-width: 600px;
+	padding: 15px;
+	border-radius: 8px;
+	
+	color: #313131;
+	font-size: 20px;
+	margin-right: 5px;
+	
+	transition: 0.4s;
+}
+#search::placeholder{
+	color: #AAA;
+}
+#search:focus, #search:valid, #submit:hover, #reset:hover{
+	color: #FFF;
+	background-color: #313131;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+}
+#submit, #reset{
+	width: 150px;
+	margin-right: 0px;
+	margin-left: 5px;
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Document sans nom</title>
+	<link rel="stylesheet" href="../styles/menu.css">
+	
+	<!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<style>
+		#my_menu{
+			z-index: 10000;
+		}
+	</style>
+</head>
+<body>
+	<nav id="my_menu">
+    <div class="logo-name">
+        <div class="logo-image">
+            <img src="../BG_images/compil.png" alt="Logo Watch-List">
+        </div>
+
+        <span class="logo_name">WL</span>
+    </div>
+
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li>
+                <a href="../home.html">
+                    <i class="uil uil-estate icon_menu"></i>
+                    <span class="link-name">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="../matchlists.html">
+                    <i class="uil uil-archive-alt icon_menu"></i>
+                    <span class="link-name">Watchlists</span>
+                </a>
+            </li>
+            <li>
+                <a href="../recherche_ajax_2.html">
+                    <i class="uil uil-notebooks icon_menu"></i>
+                    <span class="link-name">Search</span>
+                </a>
+            </li>
+<!--
+            <li>
+                <a href="photos.php">
+                    <i class="uil uil-image-v"></i>
+                    <span class="link-name">Photos</span>
+                </a>
+            </li>
+            <li>
+                <a href="news.php">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Annonces</span>
+                </a>
+            </li>
+-->
+            <li>
+                <a href="../parameters.html">
+                    <i class="uil uil-monitor icon_menu"></i>
+                    <span class="link-name">Parameters</span>
+                </a>
+            </li>
+        </ul>
+		
+        <ul class="logout-mode">
+            <li>
+                <a href="javascript:void(0);" class="admin-logOut">
+                    <i class="uil uil-signout icon_menu"></i>
+                    <span class="link-name">Se déconnecter</span>
+                </a>
+            </li>
+
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon icon_menu"></i>
+                    <span class="link-name">Mode sombre</span>
+                </a>
+
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+	<script src="../JS/menu.js"></script>
+</body>
+</html>

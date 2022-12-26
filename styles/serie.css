@@ -1,0 +1,329 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container div{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-auto-rows: minmax(20px, auto);
+    grid-gap: 15px;
+
+    background-color: #202020;
+}
+
+#container div div{width: 100%; height: 100%;}
+
+
+
+#container{
+	display: grid !important;
+    grid-template-areas: 	"head head head head"
+                            "head head head head"
+
+                            "di-1 di-1 di-1 di-1"
+
+                            "divi divi divi divi"
+
+                            "di-2 di-2 di-2 di-2"
+
+                            "side cons cons cons"
+                            "side cons cons cons"
+                            "side cons cons cons"
+                            "side cons cons cons"
+
+                            "side di-3 di-3 di-3"
+
+                            "di-e di-e di-e di-e" !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    grid-auto-rows: minmax(20px, auto) !important;
+    grid-gap: 15px !important;
+    margin-bottom: 40px !important;
+	max-width: 1500px !important;
+	margin: auto;
+}
+
+
+
+#lienRetour{
+    position: absolute;
+    top: 5.5em;
+    left: 25px;
+}
+
+
+#header{
+    grid-area: head;
+
+    grid-template-areas: 	"img tit tit tit"
+                            "img mem pop fav";
+    grid-template-columns: 250px 1fr 1fr 1fr;
+}
+#imageSerie{grid-area: img;}
+#imageSerie img{width: 250px; height: auto;}
+#title{grid-area: tit; transform: translateY(-15px);}
+#members{grid-area: mem;}
+#popularity{grid-area: pop;}
+#favorites{grid-area: fav;}
+
+#divider1{
+    grid-area: divi;
+
+    grid-template-areas: 	"add sco typ ran";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#add{grid-area: add; display: flex; justify-content: center;}
+#add button{width: min-content;}
+#score{grid-area: sco;}
+#type{grid-area: typ;}
+#rank{grid-area: ran;}
+
+#side{
+    grid-area: side;
+
+    grid-template-areas:    "."
+                            "sea"
+                            "yea"
+                            "epi"
+                            "dur"
+                            "tEn"
+                            "tJa"
+                            "rat"
+                            "sou"
+                            "air"
+                            "."
+                            "mal"
+                            "."
+                            "sPro"
+                            "sLic"
+                            "sStu"
+                            "sGen"
+                            "sEGe"
+                            "sThe"
+                            "sDem"
+                            ".";
+    grid-template-columns: 1fr;
+    padding-left: 15px;
+}
+#season{grid-area: sea;}
+#year{grid-area: yea;}
+#episodes{grid-area: epi;}
+#duration{grid-area: dur;}
+#titleEng{grid-area: tEn;}
+#titleJap{grid-area: tJa;}
+#rated{grid-area: rat;}
+#source{grid-area: sou;}
+#airing{grid-area: air;}
+#mal{grid-area: mal;}
+
+#conts{
+    grid-area: cons;
+
+    grid-template-areas:    "ai1 ."
+                            "syn syn"
+                            "bac bac"
+                            "tra tra";
+    grid-template-columns: 1fr 1fr;
+}
+#aired{grid-area: ai1;}
+#synopsis{grid-area: syn;}
+#background{grid-area: bac;}
+#trailer{
+    grid-area: tra;
+    display: flex;
+    justify-content: center;
+}
+
+.parent_infoDiv{width: 100%;}
+
+#sec_producers{
+    grid-area: sPro;
+}
+
+#sec_licensors{
+    grid-area: sLic;
+}
+
+#sec_studios{
+    grid-area: sStu;
+}
+
+#sec_genres{
+    grid-area: sGen;
+}
+
+#sec_explicit_genres{
+    grid-area: sEGe;
+}
+
+#sec_themes{
+    grid-area: sThe;
+}
+
+#sec_demographics{
+    grid-area: sDem;
+}
+
+#infoDiv{width: 100%; height: 100%;}
+
+
+
+/* DIVIDER */
+
+.divider{
+    width: 100% !important;
+    height: 100% !important;
+    background-color: transparent!important;
+}
+#divi_01{grid-area: di-1;}
+#divi_02{grid-area: di-2;}
+#divi_03{grid-area: di-3;}
+#divi_end{grid-area: di-e;}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top */
+    left: 0;
+	top: 0%;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb,(0,0,0) !important; /* Fallback color */
+	background-color: rgba(0,0,0,0.4) !important; /* Black w/ opacity */
+	-webkit-animation-name: fadeIn; /* Fade in the background */
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+    
+/* Modal Content */
+.modal-content {
+    position: fixed;
+	bottom: 0;
+	background-color: #fefefe;
+	width: 80% !important;
+	max-width: 1000px !important;
+	height: 80% !important;
+	top: 50%;
+	right: 50%;
+	transform: translateY(-50%) translateX(50%);
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s;
+}
+    
+/* The Close Button */
+.close {
+    color: white;
+	float: right !important;
+	font-size: 50px !important;
+	font-weight: bold;
+	transition: all .2s ease-in-out;
+	width: fit-content !important;
+	height: fit-content !important;
+	display: flex !important;
+	justify-content: flex-end !important;
+}
+    
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+	transition: all .2s ease-in-out;
+	width: fit-content !important;
+	height: fit-content !important;
+}
+.modal-header {
+	padding: 2px 16px;
+	background-color: #BF4B0F !important;
+	color: white;
+	text-align: center;
+/*	height: fit-content !important;*/
+}
+
+.modal-body {padding: 2px 16px; background-color: #222222; overflow-y: scroll;}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: #BF4B0F !important;
+	color: white;
+	text-align: center;
+	display: flex;
+/*	height: fit-content !important;*/
+}
+.modal-footer h3{
+	text-align: center;
+	margin: auto;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+	from {bottom: -300px; opacity: 0} 
+	to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+	from {bottom: -300px; opacity: 0}
+	to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+	from {opacity: 0} 
+	to {opacity: 1}
+}
+
+@keyframes fadeIn {
+	from {opacity: 0} 
+	to {opacity: 1}
+}
+
+
+
+/* FORMULAIRE */
+
+form, .form{
+	width: 80%;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content: center;
+}
+#name, #Create{
+	background: none;
+	border: none;
+	outline: none;
+	
+	background-color: #F3F3F3;
+	box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
+	
+	width: 80%;
+	max-width: 600px;
+	padding: 15px;
+	border-radius: 8px;
+	
+	color: #313131;
+	font-size: 20px;
+	margin-right: 5px;
+	
+	transition: 0.4s;
+}
+#name::placeholder{
+	color: #AAA;
+}
+#name:focus, #name:valid, #Create:hover{
+	color: #FFF;
+	background-color: #313131;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+}
+#Create{
+	width: 150px;
+	margin-right: 0px;
+	margin-left: 5px;
+}

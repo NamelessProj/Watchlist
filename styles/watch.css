@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cardSerie{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+	width: 22%;
+	height: auto;
+	margin: 2%;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	float: left;
+	border-radius: 15px;
+	
+	display: grid;
+	grid-template-areas: 	"lien"
+							"lien"
+							"lien"
+							"etat"
+							"pag";
+	grid-template-columns: 1fr;
+	grid-template-rows: 5em 5em 5em 50px 50px;
+	
+	box-shadow: 3px 3px 3px #777777;
+	transition: all 0.2s ease-in-out;
+	float: left;
+}
+.cardSerie:hover{
+	transition: all 0.2s ease-in-out;
+	transform: scale(1.02);	
+}
+.lienGlobalSerie{
+	grid-area: lien;
+	
+	width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: #C5E3E3;
+	font-weight: bold;
+	text-shadow: 0px 0px 5px black;
+
+    transition: all 0.2s ease-in-out;
+	
+	background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+	
+    border-radius: 15px 15px 0px 0px;
+	
+	display: grid;
+	grid-template-areas: 	"nom nom nom"
+							"nom nom nom"
+							"nom nom nom";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 5em;
+	display: table;
+}
+.nomSerie{
+	grid-area: nom;
+	width: 100%;
+    height: 100%;
+    text-align: center;
+    display: table-cell;
+	vertical-align: middle;
+	font-size: 40px;
+}
+	
+.descriptionSerie{
+	width: 100%;
+    height: 100%;
+}
+
+.etatSerie{
+	grid-area: etat;
+	width: 100%;
+    height: 100%;
+	position: relative; /* postulat de départ */
+  	top: 40%; left: 25%; /* à 50%/50% du parent référent */
+	float: left;
+}
+.pageSerie{
+	grid-area: pag;
+	margin: auto;
+	width: 150px;
+    height: 25px;
+	position: relative; /* postulat de départ */
+  	top: 0%; left: 0%; /* à 50%/50% du parent référent */
+	float: left;
+	
+}

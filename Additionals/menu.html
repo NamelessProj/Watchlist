@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+
+<title>Menu de navigation</title>
+	<link rel="stylesheet" href="../Styles/style.css">
+<style>
+	.menu{
+		top: 0px;
+	}
+</style>
+</head>
+	<div class="barmenu hide-pc"></div>
+	<div class="topnav hide-pc">
+		<div id="myLinks" class="hide-pc">
+			<a href="accueil.php">accueil</a>
+			<a href="mes-watchlists-v2.php">watchlists</a>
+			<a href="recherche.php">rechercher</a>
+			<a href="Parametres.php">paramètres</a>
+		</div>
+		<a href="javascript:void(0);" class="icon hide-pc" onclick="myFunction()">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+			</svg>
+		</a>
+	</div>
+	
+	<ul class="menu hide-mobile">
+    	<li title="accueil">
+        	<a href="accueil.php" class="menu-button home menuLien">
+            	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#E57C06" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                	<path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+            	</svg>
+          	</a>
+        </li>
+        <li title="mes watchlists"><a href="mes-watchlists-v2.php" class="about menuLien">watchlists</a></li>
+        <li title="rechercher"><a href="recherche.php" class="contact menuLien">rechercher</a></li>
+		<li title="paramètres"><a href="Parametres.php" class="menuLien">paramètres</a></li>
+    </ul>
+	
+	
+	
+<!--	<button onclick="topFunction();" id="myBtn" title="Go to top" type="button">Top</button> -->
+	<script>
+	//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+		
+		function myFunction() {
+			var x = document.getElementById("myLinks");
+			if (x.style.display == "block") {
+				x.style.display = "none";
+			} else {
+				x.style.display = "block";
+			}
+		}
+	</script>
+</html>

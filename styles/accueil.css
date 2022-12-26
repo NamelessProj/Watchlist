@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+
+
+/* ======== BTN AJOUTER ======== */
+
+#ajouter{
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+}
+#ajouter svg{
+	background-color: var(--box1-desaturate);
+	color: var(--title-icon-color2);
+  	text-align: center;
+  	display: inline-block;
+	border-radius: 5px;
+	height: 35px;
+	width: 35px;
+	transition: .2s ease-in-out;
+	border: none;
+}
+#ajouter svg:hover{
+	background-color: var(--box1-color-2);
+	color: var(--title-icon-color2);
+	transition: .1s ease-in-out;
+}
